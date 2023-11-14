@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+</head>
+<body>
+
+    <script>
+
+        const product = {
+            name: 'socks',
+            'price': 10,
+            ['size']: 'small',
+            rating: {
+                stars: 5,
+                count: 100
+            },
+            fun: function message(){
+                console.log('this is a good product!');
+            }
+        };
+
+        console.log(product);
+        console.log(product.name);
+        console.log(product.price);
+        console.log(product.size);
+
+        product.name = 'wool socks';
+        console.log(product);
+
+
+        product.quantity = 100;
+
+        console.log(product);
+
+        delete product.size;
+
+        console.log(product);
+
+        // other way to access property
+
+        product['name'] = 'cotton socks';
+        console.log(product['name']);
+        console.log(product['rating']);
+        console.log(product['rating']['stars']);
+        console.log(product.rating.count);
+
+        console.log(product.fun());
+        
+        /* doesn't work as expected
+        console.log(product['fun']); */
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,2 @@
+<h1>Ajax get method</h1>
+<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit fuga voluptas deserunt soluta esse cupiditate neque, rerum fugiat sequi, tempore suscipit, libero voluptate commodi asperiores explicabo qui itaque quo cumque?</div>

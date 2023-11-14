@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+
+    <p>Calculator</p>
+
+    <p>
+        <button onclick="
+        updateCalculate('1');">1</button>
+
+        <button onclick="
+        updateCalculate('2');">2</button>
+
+        <button onclick="
+        updateCalculate('3');">3</button>
+
+        <button onclick="
+        updateCalculate('+');">+</button>
+
+    </p>
+
+    <p>
+        <button onclick="
+        updateCalculate('4');">4</button>
+        
+        <button onclick="
+        updateCalculate('5');">5</button>
+        
+        <button onclick="
+        updateCalculate('6');">6</button>
+        
+        <button onclick="
+        updateCalculate('-');">-</button>
+    </p>
+
+    <p>
+        <button onclick="
+        updateCalculate('7');">7</button>
+        
+        <button onclick="
+        updateCalculate('8');">8</button>
+        
+        <button onclick="
+        updateCalculate('9');">9</button>
+        
+        <button onclick="
+        updateCalculate('*');">*</button>
+    </p>
+
+    <p>
+        <button onclick="
+        updateCalculate('0');">0</button>
+        
+        <button onclick="
+        updateCalculate('.');">.</button>
+        
+        <button onclick="
+        updateCalculate('=');">=</button>
+        
+        <button onclick="
+        updateCalculate('/');">/</button>
+    </p>
+
+    <button onclick="
+    updateCalculate('clear');">Clear</button>
+
+    
+    
+    <script>
+        let calculation = '';
+        function updateCalculate(character){
+            if(character === '1') {
+                calculation +='1';
+            } else if(character === '2') {
+                calculation +='2';
+            } else if(character === '3') {
+                calculation += '3';
+            } else if(character === '4') {
+                calculation += '4';
+            } else if(character === '5') {
+                calculation += '5';
+            } else if(character === '6') {
+                calculation += '6';
+            } else if(character === '7') {
+                calculation += '7';
+            } else if(character === '8') {
+                calculation += '8';
+            } else if(character === '9') {
+                calculation += '9';
+            } else if(character === '0') {
+                calculation += '0';
+            } else if(character === '+') {
+                calculation += ' + ';
+            } else if(character === '-') {
+                calculation += ' - ';
+            } else if(character === '*') {
+                calculation += ' * ';
+            } else if(character === '/') {
+                calculation += ' / ';
+            } else if(character === '.') {
+                calculation += '.';
+            } else if(character === '=') {
+                calculation = eval(calculation);
+            } else if(character ==='clear') {
+                calculation = '';
+                console.log('Cleared.');
+            }
+            if(character !== 'clear') {
+                console.log(calculation);
+            }
+            
+        }
+    </script>
+</body>
+</html>

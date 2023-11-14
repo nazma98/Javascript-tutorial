@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Quantity</title>
+</head>
+<body>
+    <p>Cart Quantity</p>
+
+    <button onclick = "
+    showQuantity();">Show Quantity</button>
+
+    <button onclick="
+    updateCartQuantiy('1');">Add to Cart</button>
+
+    <button onclick="
+    updateCartQuantiy('2');">+2</button>
+
+    <button onclick="
+    updateCartQuantiy('3');">+3</button>
+
+    <button onclick="
+    updateCartQuantiy('4');">+4</button>
+
+    <button onclick="
+    updateCartQuantiy('5');">+5</button>
+
+    <button onclick="
+    updateCartQuantiy('-1');">Remove from cart</button>
+
+    <button onclick="
+    updateCartQuantiy('-2');">-2</button>
+    
+    <button onclick="
+    updateCartQuantiy('-3');">-3</button>
+
+    <button onclick="
+    updateCartQuantiy('reset');">Reset Cart</button>
+
+    <p class="js-cart-quantity">Cart Quantity: 0</p>
+
+    <script>
+        // function to show quantity of the items in the cart
+        
+        function showQuantity(cartQuantity=0){
+            document.querySelector('.js-cart-quantity').innerHTML = `Cart Quantity: ${cartQuantity}`;
+
+            // console.log(`Cart quantity = ${cartQuantity};`);
+            // alert(`Cart Quantity: ${cartQuantity}`);
+        }
+
+        let cartQuantity = 0;
+        let maxCartQuantity = 10;
+        let minCartQuantity = 0;
+
+        // function to update the cart both add and remove items from cart
+        
+        function updateCartQuantiy(quantity){
+
+            // function to add items to the cart and update it
+
+            if(quantity === '1') {
+                if(cartQuantity >= maxCartQuantity) {
+                    alert('The cart is already full.');
+                    return;
+                } else {
+                    cartQuantity++;
+                }
+            }
+
+            if(quantity === '2') {
+                if(cartQuantity > maxCartQuantity - 2) {
+                    alert('The cart will overflow!');
+                    return;
+                } else {
+                    cartQuantity += 2;
+                }
+            }
+
+            if(quantity === '3') {
+                if(cartQuantity > maxCartQuantity - 3) {
+                    alert('The cart will overflow!');
+                    return;
+                } else {
+                    cartQuantity += 3;
+                }
+            }
+
+            if(quantity === '4') {
+                if(cartQuantity > maxCartQuantity - 4) {
+                    alert('The cart will overflow!');
+                    return;
+                } else {
+                    cartQuantity += 4;
+                    
+                }
+            }
+            
+            if(quantity === '5') {
+                if(cartQuantity > maxCartQuantity - 5) {
+                    alert('The cart will overflow!');
+                    return;
+                } else {
+                    cartQuantity += 5;
+                }
+            }
+            
+            // function to remove items from the cart
+            
+            if(quantity === '-1') {
+                if(cartQuantity <= minCartQuantity){
+                    alert('Not enough items in the cart!');
+                    return;
+                } else {
+                    cartQuantity--;
+                }
+            }
+            
+            if(quantity === '-2'){
+                if(cartQuantity <= 2){
+                    alert('Not enough items in the cart!');
+                    return;
+                } else {
+                cartQuantity -= 2;
+                }
+            }
+            
+            if(quantity === '-3'){
+                if(cartQuantity < 3){
+                    alert('Not enough items in the cart!');
+                    return;
+                } else {
+                cartQuantity -= 3;
+                }
+            }
+            
+            if(quantity === 'reset'){
+                cartQuantity = 0;
+                showQuantity(cartQuantity);
+                return;
+            } 
+
+            showQuantity(cartQuantity);
+        }
+
+       
+    
+    </script>
+</body>
+</html>

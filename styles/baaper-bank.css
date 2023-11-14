@@ -1,0 +1,63 @@
+.common-div{
+    margin: 20px 20px 20px 0px;
+    color: white;
+    padding: 20px ;
+   border-radius: 5px;
+   width: 350px;
+   font-weight: bold;
+}
+
+.deposit{
+background-color: rgb(254, 254, 92);
+}
+
+.withdraw{
+background-color: tomato;
+}
+
+.balance{
+    background-color: rgb(59, 178, 247);
+}
+
+.comm-div{
+    color: white;
+    padding: 20px;
+    width: 541px;
+    margin-right:20px  ;
+    border-radius: 5px;
+}
+
+.deposit-title {
+    background-color: rgb(190, 156, 220);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.withdraw-title {
+    background-color: rgb(254, 203, 74);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.input-deposit{
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.input-withdraw{
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.dep-with-btn{
+    background-color: rgb(9, 9, 136);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px 15px;
+    margin: 10px;
+}

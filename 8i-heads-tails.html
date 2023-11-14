@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ternary heads tails</title>
+</head>
+<body>
+    <button onclick="playGame('heads');">Heads</button>
+    <button onclick="playGame('tails');">Tails</button>
+    <script>
+        function playGame(guess) {
+            let randNumber = Math.random();
+            let result = '';
+            // let guess = 'heads';
+            result = randNumber < 0.5 ? 'heads' : 'tails';
+
+            let winLose = guess === result ? 'you win!' : 'you lose!';
+
+            console.log(`Its ${result }.${winLose}`);
+        }
+        
+        
+    </script>
+</body>
+</html>

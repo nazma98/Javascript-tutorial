@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ternary heads tails</title>
+</head>
+<body>
+    <button onclick="playGame('heads');">Heads</button>
+    <button onclick="playGame('tails');">Tails</button>
+
+    <script>
+
+        let score =JSON.parse(localStorage.getItem('score'))|| {
+            wins: 0,
+            losses: 0
+        };
+
+        // const score = {
+        //     wins: 0,
+        //     losses: 0
+        // };
+
+        function playGame(guess) {
+            let randNumber = Math.random();
+            let result = '';
+            // let guess = 'heads';
+            result = randNumber < 0.5 ? 'heads' : 'tails';
+
+            let winLose = guess === result ? 'you win!' : 'you lose!';
+
+            if(winLose === 'you win!') {
+                score.wins++;
+            } else {
+                score.losses++;
+            }
+
+            localStorage.setItem('score', JSON.stringify(score));
+            console.log(`Its ${result }.${winLose}
+            score: wins ${score.wins} losses ${score.losses}`);
+        }
+        
+        
+    </script>
+</body>
+</html>

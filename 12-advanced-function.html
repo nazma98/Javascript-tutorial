@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        // this format allows hoisting meaning the order of calling function and declaration doesn't matter
+        function greeting(){
+            console.log('Hello world');
+
+        }
+        greeting();
+
+        // functions are values ao it can be stored in a variable
+        const function1 = function greeting(){
+            console.log('Hello World 2');
+        }
+        console.log(function1);
+        console.log(typeof function1);
+        function1();
+
+        // object can store functions as values
+
+        const object1 = {
+            num: 2,
+            fun: function greeting(){
+                console.log('Hello world!');
+            }
+        };
+
+        object1.fun();
+
+        // it can be written as anonymous funciton as well
+
+        const object2 = {
+            num:3,
+            func: function(){
+                console.log('Hello world object2');
+            }
+        };
+
+        object2.func();
+
+        //values can be passed to paramters for function
+
+        function run(param) {
+            param();
+        }
+
+        run(function(){
+            console.log('Hello! run !!!');
+        });
+
+
+        // it can be written as an anonymous function because it has no name
+        // also this type of function can be accessed without the name
+
+        const function2 = function(){
+            console.log('Hello world 3');
+        }
+        function2();
+
+        // function is shortcut of the following format
+
+        var function3 = function greeting(){
+            console.log('Hello world! 4');
+        }
+        function3();
+*/
+        // filter method'
+
+        console.log([1,-2,3,-4].filter((value, index)=>{
+            return value >= 0;
+        }));
+
+
+    </script>
+</body>
+</html>

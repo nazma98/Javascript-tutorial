@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Quantity</title>
+</head>
+<body>
+    <p>Cart Quantity</p>
+
+    <button onclick = "
+    showQuantity();">Show Quantity</button>
+
+    <button onclick="
+    addToCart('1');">Add to Cart</button>
+
+    <button onclick="
+    addToCart('2');">+2</button>
+
+    <button onclick="
+    addToCart('3');">+3</button>
+
+    <button onclick="
+    addToCart('4');">+4</button>
+
+    <button onclick="
+    addToCart('5');">+5</button>
+
+    <button onclick="
+    removeItemCart('1');">Remove from cart</button>
+
+    <button onclick="
+    removeItemCart('2');">-2</button>
+    
+    <button onclick="
+    removeItemCart('3');">-3</button>
+
+    <button onclick="
+    removeItemCart('reset');">Reset Cart</button>
+
+    <script>
+        // function to show quantity of the items in the cart
+        function showQuantity(cartQuantity=0){
+            console.log(`Cart quantity = ${cartQuantity};`);
+            alert(`Cart Quantity: ${cartQuantity}`);
+        }
+
+        let cartQuantity = 0;
+        let maxCartQuantity = 10;
+        let minCartQuantity = 0;
+        // function to add items to the cart and update it
+        function addToCart(quantity){
+            if(quantity === '1') {
+                if(cartQuantity >= maxCartQuantity) {
+                    alert('The cart is already full.');
+                } else {
+                    cartQuantity++;
+                }
+            } else if(quantity === '2') {
+                if(cartQuantity > maxCartQuantity - 2) {
+                    alert('The cart will overflow!');
+                } else {
+                    cartQuantity += 2;
+                }
+            } else if(quantity === '3') {
+                if(cartQuantity > maxCartQuantity - 3) {
+                    alert('The cart will overflow!');
+                } else {
+                    cartQuantity += 3;
+                }
+            } else if(quantity === '4') {
+                if(cartQuantity > maxCartQuantity - 4) {
+                    alert('The cart will overflow!');
+                } else {
+                    cartQuantity += 4;
+                    
+                }
+            } else if(quantity === '5') {
+                if(cartQuantity > maxCartQuantity - 5) {
+                    alert('The cart will overflow!');
+                } else {
+                    cartQuantity += 5;
+                }
+            }
+            showQuantity(cartQuantity);
+        }
+
+        // function to remove items from the cart
+        function removeItemCart(quantity=0){
+            if(quantity === '1') {
+                if(cartQuantity <= minCartQuantity){
+                    alert('Not enough items in the cart!');
+                } else {
+                    cartQuantity--;
+                }
+            } else if(quantity === '2'){
+                if(cartQuantity <= 2){
+                    alert('Not enough items in the cart!');
+                } else {
+                cartQuantity -= 2;
+                }
+            } else if(quantity === '3'){
+                if(cartQuantity < 3){
+                    alert('Not enough items in the cart!');
+                } else {
+                cartQuantity -= 3;
+                }
+            } else if(quantity === 'reset'){
+                cartQuantity = 0;
+                console.log(`Cart is reset. Cart Quantity: ${cartQuantity}`);
+                return;
+            } 
+            showQuantity(cartQuantity);
+        }
+    </script>
+</body>
+</html>

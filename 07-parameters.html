@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calculateTax(cost, tax= 0.1){
+            let total = cost * tax;
+            return total;
+        }
+        total = calculateTax(1000, 0.3);
+        console.log(total);
+
+        total = calculateTax(2000);
+        console.log(total);
+
+        total = calculateTax(9000);
+        console.log(total);
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const student = {
+            name : "Nazma Sarker",
+            roll : 294,
+            regNo : 46289,
+            department : "Computer Science and Engineering",
+            courses : {
+                cse101 : "Electronics",
+                cse102 : "Computer Architecture"
+            },
+            cgpa : 4.64,
+            nameOfStud: function nameStd(){
+                return student.name;
+            }
+        };
+
+        const student2 = {
+            name : "Nazma Sarker",
+            roll : 294,
+            regNo : 46289,
+            department : "Computer Science and Engineering",
+            courses : {
+                cse101 : "Electronics",
+                cse102 : "Computer Architecture"
+            },
+            cgpa : 4.64,
+            nameOfStud: function nameStd(){
+                return student.name;
+            }
+        };
+
+
+        console.log(student);
+
+        console.log(typeof student);
+
+        console.log(student['courses']);
+
+        console.log(student.name);
+
+        const jsonStudent = JSON.stringify(student);
+        console.log(jsonStudent);
+
+        console.log(student.nameOfStud());
+
+        const anotherStd = student;
+
+        console.log(anotherStd);
+
+        // both objects have same reference
+        console.log(anotherStd === student);
+
+        // objects can't be compared directly
+        console.log(student === student2);
+
+        // const name = student.name;
+
+        // destructuring
+
+        const {name, regNo} = student; // multiple property can be destructured
+        console.log(name);
+        console.log(regNo);
+
+        //shorthand property
+
+        const student3 = {
+            name,
+            regNo,
+            // method: function getRegNo(){
+            //     return regNo;
+            // }
+
+            method(){
+                return regNo;
+            }
+        };
+        console.log(student3);
+        console.log(student3.method());
+
+    </script>
+</body>
+</html>

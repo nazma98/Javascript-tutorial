@@ -1,0 +1,18 @@
+.comm-btn{
+    border: none;
+    padding: 8px 10px;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.gaming-btn{   
+    background-color: black;
+    color: white;
+}
+
+.toggled-gaming-btn{
+    background-color:  rgb(230,230,230);
+    color: black;
+}
